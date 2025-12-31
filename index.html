@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Italian Food Order Admin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍝 Italian Food Order Admin</h1>
+            <p class="subtitle">Administrator Dashboard</p>
+        </header>
+
+        <nav class="tab-nav">
+            <button class="tab-button active" data-tab="home">Admin Home</button>
+            <button class="tab-button" data-tab="menu">Menu</button>
+            <button class="tab-button" data-tab="orders">Customer Orders</button>
+            <button class="tab-button" data-tab="maintenance">Maintenance</button>
+        </nav>
+
+        <main>
+            <!-- Admin Home Tab -->
+            <section id="home" class="tab-content active">
+                <h2>Admin Home</h2>
+                <div class="home-cards">
+                    <div class="card" onclick="switchToTab('menu')">
+                        <div class="card-icon">🍕</div>
+                        <h3>Menu Management</h3>
+                        <p>View and manage Italian food items with descriptions and pricing</p>
+                    </div>
+                    <div class="card" onclick="switchToTab('orders')">
+                        <div class="card-icon">📦</div>
+                        <h3>Customer Orders</h3>
+                        <p>Review online to-go orders from customers</p>
+                    </div>
+                    <div class="card" onclick="switchToTab('maintenance')">
+                        <div class="card-icon">🔧</div>
+                        <h3>Maintenance Schedule</h3>
+                        <p>Manage and schedule restaurant maintenance tasks</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Menu Tab -->
+            <section id="menu" class="tab-content">
+                <h2>Menu - Italian Food Items</h2>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <h3>Margherita Pizza 🍕</h3>
+                        <p class="description">Classic pizza with fresh mozzarella, tomato sauce, and basil leaves</p>
+                        <p class="price">$12.99</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3>Spaghetti Carbonara 🍝</h3>
+                        <p class="description">Traditional Roman pasta with eggs, pecorino cheese, guanciale, and black pepper</p>
+                        <p class="price">$15.99</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3>Fettuccine Alfredo</h3>
+                        <p class="description">Creamy pasta with parmesan cheese and butter sauce</p>
+                        <p class="price">$14.99</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3>Lasagna Bolognese</h3>
+                        <p class="description">Layered pasta with rich meat sauce, béchamel, and mozzarella cheese</p>
+                        <p class="price">$16.99</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3>Chicken Parmigiana 🍗</h3>
+                        <p class="description">Breaded chicken breast topped with marinara sauce and melted mozzarella</p>
+                        <p class="price">$17.99</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3>Risotto ai Funghi 🍚</h3>
+                        <p class="description">Creamy Italian rice with mixed mushrooms and parmesan cheese</p>
+                        <p class="price">$13.99</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3>Tiramisu 🍰</h3>
+                        <p class="description">Classic Italian dessert with coffee-soaked ladyfingers and mascarpone cream</p>
+                        <p class="price">$7.99</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3>Panna Cotta</h3>
+                        <p class="description">Silky smooth Italian custard with berry compote</p>
+                        <p class="price">$6.99</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3>Bruschetta 🥖</h3>
+                        <p class="description">Grilled bread topped with diced tomatoes, garlic, basil, and olive oil</p>
+                        <p class="price">$8.99</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3>Caprese Salad 🥗</h3>
+                        <p class="description">Fresh mozzarella, tomatoes, and basil drizzled with balsamic glaze</p>
+                        <p class="price">$9.99</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Customer Orders Tab -->
+            <section id="orders" class="tab-content">
+                <h2>Customer Online To-Go Orders</h2>
+                <div class="orders-list">
+                    <div class="order-card">
+                        <div class="order-header">
+                            <span class="order-id">Order #1001</span>
+                            <span class="order-status pending">Pending</span>
+                        </div>
+                        <div class="order-details">
+                            <p><strong>Customer:</strong> John Smith</p>
+                            <p><strong>Items:</strong> Margherita Pizza (x2), Tiramisu (x1)</p>
+                            <p><strong>Total:</strong> $33.97</p>
+                            <p><strong>Pickup Time:</strong> 6:30 PM</p>
+                        </div>
+                    </div>
+                    <div class="order-card">
+                        <div class="order-header">
+                            <span class="order-id">Order #1002</span>
+                            <span class="order-status preparing">Preparing</span>
+                        </div>
+                        <div class="order-details">
+                            <p><strong>Customer:</strong> Maria Garcia</p>
+                            <p><strong>Items:</strong> Spaghetti Carbonara (x1), Caprese Salad (x1)</p>
+                            <p><strong>Total:</strong> $25.98</p>
+                            <p><strong>Pickup Time:</strong> 7:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="order-card">
+                        <div class="order-header">
+                            <span class="order-id">Order #1003</span>
+                            <span class="order-status ready">Ready</span>
+                        </div>
+                        <div class="order-details">
+                            <p><strong>Customer:</strong> David Lee</p>
+                            <p><strong>Items:</strong> Lasagna Bolognese (x1), Bruschetta (x1), Panna Cotta (x2)</p>
+                            <p><strong>Total:</strong> $38.96</p>
+                            <p><strong>Pickup Time:</strong> 6:45 PM</p>
+                        </div>
+                    </div>
+                    <div class="order-card">
+                        <div class="order-header">
+                            <span class="order-id">Order #1004</span>
+                            <span class="order-status pending">Pending</span>
+                        </div>
+                        <div class="order-details">
+                            <p><strong>Customer:</strong> Sarah Johnson</p>
+                            <p><strong>Items:</strong> Chicken Parmigiana (x2), Fettuccine Alfredo (x1)</p>
+                            <p><strong>Total:</strong> $50.97</p>
+                            <p><strong>Pickup Time:</strong> 7:15 PM</p>
+                        </div>
+                    </div>
+                    <div class="order-card">
+                        <div class="order-header">
+                            <span class="order-id">Order #1005</span>
+                            <span class="order-status completed">Completed</span>
+                        </div>
+                        <div class="order-details">
+                            <p><strong>Customer:</strong> Michael Brown</p>
+                            <p><strong>Items:</strong> Risotto ai Funghi (x1), Tiramisu (x1)</p>
+                            <p><strong>Total:</strong> $21.98</p>
+                            <p><strong>Pickup Time:</strong> 6:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Maintenance Tab -->
+            <section id="maintenance" class="tab-content">
+                <h2>Maintenance Scheduling</h2>
+                <div class="maintenance-list">
+                    <div class="maintenance-card">
+                        <div class="maintenance-header">
+                            <span class="maintenance-title">Kitchen Equipment Inspection</span>
+                            <span class="maintenance-priority high">High Priority</span>
+                        </div>
+                        <div class="maintenance-details">
+                            <p><strong>Scheduled Date:</strong> January 5, 2026</p>
+                            <p><strong>Time:</strong> 9:00 AM - 11:00 AM</p>
+                            <p><strong>Technician:</strong> Mario's Appliance Service</p>
+                            <p><strong>Description:</strong> Quarterly inspection of ovens, stoves, and refrigeration units</p>
+                        </div>
+                    </div>
+                    <div class="maintenance-card">
+                        <div class="maintenance-header">
+                            <span class="maintenance-title">HVAC System Service</span>
+                            <span class="maintenance-priority medium">Medium Priority</span>
+                        </div>
+                        <div class="maintenance-details">
+                            <p><strong>Scheduled Date:</strong> January 12, 2026</p>
+                            <p><strong>Time:</strong> 8:00 AM - 10:00 AM</p>
+                            <p><strong>Technician:</strong> Cool Air HVAC</p>
+                            <p><strong>Description:</strong> Filter replacement and system performance check</p>
+                        </div>
+                    </div>
+                    <div class="maintenance-card">
+                        <div class="maintenance-header">
+                            <span class="maintenance-title">Fire Safety Equipment Check</span>
+                            <span class="maintenance-priority high">High Priority</span>
+                        </div>
+                        <div class="maintenance-details">
+                            <p><strong>Scheduled Date:</strong> January 8, 2026</p>
+                            <p><strong>Time:</strong> 2:00 PM - 3:00 PM</p>
+                            <p><strong>Technician:</strong> Safety First Inc.</p>
+                            <p><strong>Description:</strong> Annual inspection of fire extinguishers and suppression system</p>
+                        </div>
+                    </div>
+                    <div class="maintenance-card">
+                        <div class="maintenance-header">
+                            <span class="maintenance-title">Plumbing Maintenance</span>
+                            <span class="maintenance-priority low">Low Priority</span>
+                        </div>
+                        <div class="maintenance-details">
+                            <p><strong>Scheduled Date:</strong> January 20, 2026</p>
+                            <p><strong>Time:</strong> 10:00 AM - 12:00 PM</p>
+                            <p><strong>Technician:</strong> Luigi's Plumbing</p>
+                            <p><strong>Description:</strong> Routine check of pipes, drains, and water heater</p>
+                        </div>
+                    </div>
+                    <div class="maintenance-card">
+                        <div class="maintenance-header">
+                            <span class="maintenance-title">Electrical System Review</span>
+                            <span class="maintenance-priority medium">Medium Priority</span>
+                        </div>
+                        <div class="maintenance-details">
+                            <p><strong>Scheduled Date:</strong> January 15, 2026</p>
+                            <p><strong>Time:</strong> 1:00 PM - 3:00 PM</p>
+                            <p><strong>Technician:</strong> Bright Electric Co.</p>
+                            <p><strong>Description:</strong> Inspection of electrical panels and lighting systems</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Italian Food Order Admin - All Rights Reserved</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
